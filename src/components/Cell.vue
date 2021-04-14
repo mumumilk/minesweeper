@@ -24,10 +24,10 @@
 <script>
 import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   emits: ['left-click', 'right-click'],
   props: ['cell'],
-};
+});
 </script>
 
 <style></style>

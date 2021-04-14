@@ -9,10 +9,7 @@
         {{ emoji }}
       </button>
       <main class="p-5 bg-blue-100 rounded" :style="gridStyle">
-        <template
-          v-for="(row, rowIndex) in board"
-          :key="`${rowIndex}`"
-        >
+        <template v-for="(row, rowIndex) in board" :key="`${rowIndex}`">
           <Cell
             v-for="(column, columnIndex) in row"
             :key="`${rowIndex}${columnIndex}`"
@@ -22,7 +19,12 @@
           />
         </template>
       </main>
-      <a class="text-blue-400" href="https://github.com/mumumilk/minesweeper" target="_blank">Check me on github</a>
+      <a
+        class="text-blue-400"
+        href="https://github.com/mumumilk/minesweeper"
+        target="_blank"
+        >Check me on github</a
+      >
     </div>
   </div>
 </template>
@@ -71,7 +73,7 @@ export default defineComponent({
           return '🙂';
       }
     },
-    gridStyle() {
+    gridStyle(): {} {
       return {
         display: 'grid',
         gridTemplateColumns: `repeat(${this.gridSize}, minmax(auto, 1fr))`,
